@@ -1,0 +1,465 @@
+/* PALETA ROSA PASTEL + LAVANDA */
+:root {
+  --color-primario: #F3B5C7;  /* Rosa pastel suave */
+  --color-secundario: #C9B6E6;  /* Lavanda claro */
+  --color-terciario: #F8E1F4;  /* Rosa blanquecino */
+  --color-fondo: #FFF9FC;  /* Blanco con tono rosa muy tenue */
+  --color-texto: #5D4A66;  /* Violeta oscuro para contraste */
+  --color-blanco: #FFFFFF;
+  --sombra: 0 4px 20px rgba(243, 181, 199, 0.15);
+  --transicion: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+}
+
+/* ESTILOS GENERALES */
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  background: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.6;
+}
+
+/* HEADER CON DEGRADADO ROMÁNTICO */
+header {
+  text-align: center;
+  background: linear-gradient(135deg, var(--color-terciario) 0%, var(--color-primario) 100%);
+  padding: 3rem 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="%23ffffff30"><path d="M50 0C40 20, 20 40, 0 50C20 60, 40 80, 50 100C60 80, 80 60, 100 50C80 40, 60 20, 50 0Z"/></svg>');
+  background-size: 80px;
+  opacity: 0.3;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.8rem;
+  color: var(--color-texto);
+  font-weight: 700;
+  position: relative;
+  animation: fadeInDown 1s ease;
+}
+
+header p {
+  font-size: 1.3rem;
+  margin: 0.5rem 0 0;
+  color: var(--color-texto);
+  position: relative;
+  animation: fadeIn 1.5s ease;
+}
+
+/* NAVEGACIÓN DELICADA */
+nav {
+  margin-top: 2rem;
+  position: relative;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 1rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--color-texto);
+  font-weight: 600;
+  background-color: var(--color-blanco);
+  padding: 0.7rem 1.5rem;
+  border-radius: 50px;
+  transition: var(--transicion);
+  box-shadow: var(--sombra);
+  display: inline-block;
+  border: 2px solid var(--color-terciario);
+}
+
+nav ul li a:hover {
+  background-color: var(--color-primario);
+  color: var(--color-blanco);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(243, 181, 199, 0.3);
+}
+
+/* CONTENEDOR PRINCIPAL */
+.contenedor-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 3rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* TARJETAS ELEGANTES */
+.card {
+  background: var(--color-blanco);
+  border-radius: 20px;
+  box-shadow: var(--sombra);
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 800px;
+  transition: var(--transicion);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--color-terciario);
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--color-primario), var(--color-secundario));
+  transition: var(--transicion);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(243, 181, 199, 0.2);
+}
+
+.card:hover::after {
+  width: 8px;
+}
+
+/* CONTADOR DE ANIVERSARIO */
+.contador-aniversario {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.tiempo-box {
+  background: var(--color-blanco);
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  min-width: 80px;
+  box-shadow: var(--sombra);
+  border: 1px solid var(--color-terciario);
+}
+
+.tiempo-box span {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-primario);
+  display: block;
+  line-height: 1;
+}
+
+.tiempo-box small {
+  color: var(--color-texto);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* SECCIÓN DE PROMESAS */
+.promesas-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.promesa {
+  background: linear-gradient(135deg, var(--color-blanco) 0%, var(--color-terciario) 100%);
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  transition: var(--transicion);
+  border: 1px solid var(--color-primario);
+}
+
+.promesa:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(243, 181, 199, 0.15);
+}
+
+.promesa-icono {
+  font-size: 2.5rem;
+  color: var(--color-primario);
+  margin-bottom: 1rem;
+}
+
+.promesa h3 {
+  color: var(--color-primario);
+  margin-bottom: 0.8rem;
+}
+
+/* CARRUSEL */
+.carrusel-container {
+    position: relative;
+    max-width: 800px;
+    margin: 2rem auto 0;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(243, 181, 199, 0.2);
+    height: 500px;
+}
+
+.carrusel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+}
+
+.carrusel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex: 0 0 100%;
+    display: block;
+}
+
+.carrusel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.7);
+    color: var(--color-primario);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+#prevBtn { left: 15px; }
+#nextBtn { right: 15px; }
+
+.carrusel-indicadores {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 10px;
+}
+
+.indicador {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--color-terciario);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicador.activo {
+    background: var(--color-primario);
+    transform: scale(1.2);
+}
+
+/* LÍNEA DE TIEMPO */
+ul {
+  list-style: none;
+  padding-left: 0;
+  position: relative;
+}
+
+ul::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10px;
+  height: 100%;
+  width: 3px;
+  background: linear-gradient(to bottom, var(--color-primario), var(--color-secundario));
+}
+
+ul li {
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  padding-left: 2.5rem;
+  position: relative;
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--color-primario);
+  border: 3px solid var(--color-blanco);
+  box-shadow: 0 0 0 2px var(--color-terciario);
+}
+
+/* REPRODUCTOR DE MÚSICA */
+iframe {
+  border-radius: 12px;
+  margin-top: 1rem;
+  box-shadow: var(--sombra);
+  border: none;
+  height: 100px;
+  border: 1px solid var(--color-terciario);
+}
+
+/* FOOTER ROMÁNTICO */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, var(--color-terciario) 0%, var(--color-secundario) 100%);
+  font-weight: 600;
+  color: var(--color-texto);
+  font-size: 1.2rem;
+  position: relative;
+}
+
+footer p {
+  position: relative;
+  animation: pulse 2s infinite;
+}
+
+/* BOTÓN DE CONFETI */
+.btn-romantico {
+  background: var(--color-primario);
+  color: var(--color-blanco);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transicion);
+  margin-top: 1rem;
+  box-shadow: var(--sombra);
+  border: 2px solid var(--color-blanco);
+}
+
+.btn-romantico:hover {
+  background: var(--color-secundario);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(201, 182, 230, 0.3);
+}
+
+/* ANIMACIONES */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* RESPONSIVIDAD */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
+  
+  .card {
+    padding: 1.8rem;
+  }
+  
+  .carrusel img {
+    height: 350px;
+  }
+  
+  ul li {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+  
+  header p {
+    font-size: 1.1rem;
+  }
+  
+  nav ul li a {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .card {
+    padding: 1.5rem;
+  }
+  
+  .tiempo-box {
+    padding: 0.8rem 1rem;
+    min-width: 70px;
+  }
+  
+  .tiempo-box span {
+    font-size: 1.5rem;
+  }
+  
+  .carrusel img {
+    height: 250px;
+  }
+  
+  .carrusel-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+  }
+}
+/* CONTENEDOR DE VIDEO */
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 1.5rem auto 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--sombra);
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid var(--color-terciario);
+}
+
+/* Para mantener la proporción en diferentes tamaños */
+@media (max-width: 768px) {
+    .video-container {
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-container {
+        max-width: 100%;
+    }
+}

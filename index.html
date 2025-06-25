@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestro Primer Aniversario</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="confetti-container"></div>
+    
+    <header>
+        <h1>Nuestro Primer Año Juntos</h1>
+        <p>Karina & Harol</p>
+        <div class="contador-aniversario">
+            <div class="tiempo-box">
+                <span id="dias">0</span>
+                <small>Días</small>
+            </div>
+            <div class="tiempo-box">
+                <span id="horas">0</span>
+                <small>Horas</small>
+            </div>
+            <div class="tiempo-box">
+                <span id="minutos">0</span>
+                <small>Minutos</small>
+            </div>
+            <div class="tiempo-box">
+                <span id="segundos">0</span>
+                <small>Segundos</small>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#carta"><i class="fas fa-heart"></i> Carta</a></li>
+                <li><a href="#promesas"><i class="fas fa-hand-holding-heart"></i> Promesas</a></li>
+                <li><a href="#galeria"><i class="fas fa-images"></i> Galería</a></li>
+                <li><a href="#linea-tiempo"><i class="fas fa-history"></i> Nuestra Historia</a></li>
+                <li><a href="#cancion"><i class="fas fa-music"></i> Vide0</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contenedor-cards">
+        <section id="carta" class="card">
+            <h2><i class="fas fa-envelope-open-text"></i> Una Carta Para Ti</h2>
+            <p>
+                Mi amor, han pasado <span id="contador-carta">0</span> días desde que nuestras almas decidieron caminar juntas, 
+                y cada uno ha sido más hermoso que el anterior. Tu risa, tu ternura, tu presencia, 
+                lo llenan todo. Gracias por amarme, por enseñarme lo que es el amor verdadero. 
+                Este es solo el primer capítulo de una historia eterna. Te amo con todo mi corazón.
+            </p>
+        </section>
+
+        <section id="promesas" class="card">
+            <h2><i class="fas fa-ring"></i> Mis Promesas Para Ti</h2>
+            <div class="promesas-container">
+                <div class="promesa">
+                    <div class="promesa-icono"><i class="fas fa-heart"></i></div>
+                    <h3>Amarte Eternamente</h3>
+                    <p>Prometo amarte cada día más, en las buenas y en las malas, con todo mi corazón.</p>
+                </div>
+                <div class="promesa">
+                    <div class="promesa-icono"><i class="fas fa-hand-holding-heart"></i></div>
+                    <h3>Cuidar de Ti</h3>
+                    <p>Seré tu apoyo incondicional y te protegeré siempre como el tesoro que eres.</p>
+                </div>
+                <div class="promesa">
+                    <div class="promesa-icono"><i class="fas fa-laugh-beam"></i></div>
+                    <h3>Hacerte Feliz</h3>
+                    <p>Llenaré tu vida de alegría, risas y momentos inolvidables.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="galeria" class="card">
+    <h2><i class="fas fa-camera-retro"></i> Nuestros Momentos</h2>
+    <div class="carrusel-container">
+        <div class="carrusel">
+           <img src="imagenes/b.jpg" alt="Nuestro primer día juntos">
+                    <img src="imagenes/e.jpg" alt="Momentos especiales">
+                    <img src="imagenes/f.jpg" alt="Celebrando nuestro amor">
+                    <img src="imagenes/i.jpg" alt="Celebrando nuestro amor">
+                    <img src="imagenes/j.jpg" alt="Celebrando nuestro amor">
+                    <img src="imagenes/k.jpg" alt="Celebrando nuestro amor">
+                    <img src="imagenes/7.jpg" alt="Celebrando nuestro amor">
+                    <img src="imagenes/8.jpg" alt="Celebrando nuestro amor">
+                    <img src="imagenes/9.jpg" alt="Celebrando nuestro amor">
+                    <img src="imagenes/10.jpg" alt="Celebrando nuestro amor">
+        </div>
+        <button class="carrusel-btn" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+        <button class="carrusel-btn" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+        <div class="carrusel-indicadores" id="indicadores"></div>
+    </div>
+</section>
+
+        <section id="linea-tiempo" class="card">
+            <h2><i class="fas fa-heartbeat"></i> Nuestra Historia</h2>
+            <ul>
+                <li><strong>25 de junio de 2024:</strong> Nos hicimos novios ❤️</li>
+                <li><strong>23 de marzo de 2025:</strong> Primer concierto juntos 🎶</li>
+                <li><strong>13 de junio de 2025:</strong> Tu cumpleaños 🎂</li>
+                <li><strong>25 de junio de 2025:</strong> Nuestro primer aniversario 💍</li>
+            </ul>
+        </section>
+
+<section id="cancion" class="card">
+    <h2><i class="fas fa-music"></i> Un breve resumen xd</h2>
+    <div class="video-container">
+        <video controls autoplay muted loop>
+            <source src="imagenes/aniversario xd ‐ Hecho con Clipchamp.mp4" type="video/mp4">
+            Tu navegador no soporta videos HTML5
+        </video>
+    </div>
+</section>
+    </main>
+
+    <footer>
+        <p>Con todo mi amor, en nuestro primer aniversario. 💖</p>
+        <button id="btn-confetti" class="btn-romantico">
+            <i class="fas fa-heart"></i> Celebra nuestro amor
+        </button>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
